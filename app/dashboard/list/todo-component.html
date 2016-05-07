@@ -1,0 +1,49 @@
+<div>
+    <!-- Add Item -->
+    <div class="col-xs-12">
+        <div class="input-group">
+            <input type="text"
+                   class="form-control"
+                   placeholder="Add Item"
+                   ng-model="vm.newItem">
+            <span class="input-group-btn">
+                <button class="btn btn-default"
+                        type="button"
+                        ng-click="vm.addItem(vm.newItem)">Add Item
+                </button>
+            </span>
+        </div>
+    </div>
+    <!-- /Add Item -->
+
+    <br/>
+    <br/>
+    <br/>
+
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>
+                Todo
+            </th>
+            <th>
+                Options
+            </th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="item in vm.list track by $index">
+            <td>
+                {{item}}
+            </td>
+            <td>
+                <button type="button"
+                        class="btn btn-default"
+                        ng-click="vm.deleteItem($index)">
+                    <span class="glyphicon glyphicon-remove"></span>
+                </button>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
