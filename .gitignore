@@ -1,2 +1,4 @@
 app/jspm_packages
 .idea/
+node_modules
+test_results/

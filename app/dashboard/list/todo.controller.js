@@ -1,5 +1,3 @@
-import _ from 'lodash';
-
 export default class TodoController {
 
 	constructor() {
@@ -11,6 +9,6 @@ export default class TodoController {
 	}
 
 	deleteItem(index) {
-		_(this.list).splice(index, 1).value();
+		this.list.splice(index, 1);
 	}
 }
