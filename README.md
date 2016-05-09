@@ -5,6 +5,10 @@ Clone the repo
 
     git clone https://github.com/el-davo/angular-jspm-es6-seed.git
 
+Install npm dependencies
+
+    npm i
+
 Install jspm globally if you have not already
 
     npm install -g jspm
