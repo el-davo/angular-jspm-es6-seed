@@ -11,4 +11,5 @@ export default class TodoController {
 	deleteItem(index) {
 		this.list.splice(index, 1);
 	}
+
 }

@@ -4,7 +4,8 @@ module.exports = function (config) {
     config.set({
 
         files: [
-	        './node_modules/phantomjs-polyfill/bind-polyfill.js'
+	        './node_modules/phantomjs-polyfill/bind-polyfill.js',
+	        {pattern: 'app/!(jspm_packages)**/*.js', included: false}
         ],
 
         preprocessors: {
@@ -48,11 +49,7 @@ module.exports = function (config) {
         coverageReporter: {
             instrumenters: {isparta: require('isparta')},
             instrumenter: {
-                'app/js/**/*.js': 'isparta'
-            },
-            instrumenterOptions: {
-                isparta: {},
-                istanbul: {noCompact: true}
+                '/app/**/*.js': 'isparta'
             },
             reporters: [
                 {type: 'html', dir: 'test_results/coverage/', subdir: 'html'},
